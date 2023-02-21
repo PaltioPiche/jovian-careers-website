@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>Cule's Careers</title>
-    <style>
-      h1 {
-        font-size: 40px;
-        font-family: Verdana;
-        font-weight: Normal;
-        color: rgb(100,0,0);
-        text-align: center;
-      }
-
-      #banner{
-        width: 100%;
-        height: 360px;
-        object-fitcoverer;
-      }
-      h2{
-        font-size: 32px;
-        font-family: Verdana;
-        font-weight: Normal;
-        color: rgb(50,0,0);
-        text-align: center;
-        }
-      .bodytext{
-        font-family: Verdana;
-        font-weight: Normal;
-        color: rgb(20,0,0);
-        text-align: center;
-        }
-      #container{
-        max-width: 720px;
-        margin: 0 auto 0 auto;
-      }
-      
-    </style>
   
-  </head>
+    <head>
+      <title>Cule's Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <style>
+        #banner {
+          height: 360px;
+          width:100%;
+          object-fit: cover;
+        }
+     </style>
+    
+    </head>
   
   <body>
-    <div id="container">
-      <h1>Become a Cule!</h1>
-      <img id="banner" src="https://jovian-careers-website.sansivar.repl.co/static/banner.jpg"  alt="banner1">
-      <h2>About Cule</h2>
-      <p class="bodytext">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Become a {{company_name}}</h1>
+      <img class="img-fluid" id="banner" src="https://jovian-careers-website.sansivar.repl.co/static/banner.jpg" alt="banner1">
+      <h2 class="text-center mt-2">About Cule</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-      <h2>How to become a Cule</h2>
-      <p class="bodytext">TODO - Show Process</p>
-      <div style="text-align:center;">
-      <button>Contact Us</button>
-      <p>Copyright 2023, Cule</p>
+      
+      <h2 class="text-center mt-2">How to become a Cule</h2>
+      
+      <div>
+            {% for memb in memb %}
+             {% include 'memb.html' %}   
+            {% endfor %}
       </div>
-    </body>
-    </div>
+      
+      <div class="text-center">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2023, Cule</p>
+      </div>
+   
+     
+  
+  </body>
 </html>
