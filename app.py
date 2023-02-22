@@ -20,7 +20,7 @@ MEMB = [{
 }, {
   'id': 4,
   'title': 'Remote Membership',
-  'location': 'San Francisco, CA',
+  'location': 'Houston, TX',
 }]
 
 
@@ -28,10 +28,11 @@ MEMB = [{
 def hello_world():
   return render_template('home.html', memb=MEMB, company_name='Cule!')
 
+
 @app.route("/api/memb")
 def list_memb():
   return jsonify(MEMB)
 
-  
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
